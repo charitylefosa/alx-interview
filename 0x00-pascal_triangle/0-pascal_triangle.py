@@ -8,7 +8,7 @@ def pascal_triangle(n):
     the Pascal's triangle of a given integer.
     '''
     triangle = []
-    if type(n) is not int or n <= 0:
+    if not isinstance(n, int) or n <= 0:
         return triangle
     for i in range(n):
         line = []
