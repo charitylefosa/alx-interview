@@ -3,7 +3,8 @@
 
 
 def minOperations(n):
-    """Calculates fewest number of operations needed to result in exactly n H characters in the file."""
+    """Calculates fewest number of operations needed to result in exactly 
+    n H characters in the file."""
     if n <= 1:
         return 0
     operations = 0
