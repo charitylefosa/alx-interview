@@ -1,19 +1,32 @@
 #!/usr/bin/python3
-"""Minimum Operations"""
+"""
+Minimum Operations
+"""
 
 
 def minOperations(n):
-    """Calculates fewest number of operations needed to result in exactly 
-    n H characters in the file."""
+    """
+    Calculates the fewest number of operations needed to result in exactly
+    n H characters in the file.
+    """
     if n <= 1:
         return 0
+
     operations = 0
     i = 2
-    while i <= n:
-        if n % i == 0:
+    while i * i <= n:
+        while n % i == 0:
             operations += i
             n /= i
-        else:
-            i += 1
-    return operations
+        i += 1
+    if n > 1:
+        operations += n
+    return int(operations)
 
+
+if __name__ == "__main__":
+    n = 4
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+
+    n = 12
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
