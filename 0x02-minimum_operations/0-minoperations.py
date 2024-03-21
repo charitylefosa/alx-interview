@@ -26,7 +26,7 @@ def minOperations(n):
 
 if __name__ == "__main__":
     n = 4
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+    print("Min number of operations to reach {} char: {}".format(n, minOperations(n)))
 
     n = 12
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+    print("Min number of operations to reach {} char: {}".format(n, minOperations(n)))
